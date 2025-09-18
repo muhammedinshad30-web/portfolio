@@ -1,0 +1,67 @@
+:root{
+
+
+.project-body{
+padding:1rem;
+display:flex;
+flex-direction:column;
+gap:.6rem;
+}
+.project-title{
+font-size:1.05rem;
+margin:0;
+}
+.project-desc{
+color:var(--muted);
+font-size:.95rem;
+margin:0;
+line-height:1.35;
+}
+
+
+.project-meta{
+margin-top:auto; /* push links to the bottom */
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:1rem;
+}
+.tags{
+font-size:.85rem;
+color:var(--muted);
+}
+
+
+.btn{
+display:inline-block;
+padding:.45rem .7rem;
+border-radius:8px;
+text-decoration:none;
+font-size:.9rem;
+font-weight:600;
+background:var(--accent);
+color:white;
+transition:opacity .15s ease, transform .15s ease;
+}
+.btn:hover{opacity:.9; transform:translateY(-2px)}
+
+
+.btn.outline{
+background:transparent;
+color:var(--muted);
+border:1px solid rgba(255,255,255,0.06);
+}
+
+
+/* Responsive rules */
+@media (max-width:1000px){
+.projects-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:640px){
+.projects-grid{grid-template-columns:1fr;}
+.project-media img{height:220px}
+}
+
+
+/* small utility if you want full-bleed image cards */
+.project-card.full-bleed .project-media img{height:260px;}
