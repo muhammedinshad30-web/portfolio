@@ -8,7 +8,7 @@ function sendmail(){
 
 
 const serviceID ="service_kvjz02d";
-const templateID="template_awy1ftb"
+const templateID="template_awy1ftb";
 
 emailjs.send(serviceID,templateID,params)
 .then(
